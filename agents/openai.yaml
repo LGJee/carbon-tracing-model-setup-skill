@@ -1,0 +1,4 @@
+interface:
+  display_name: "Carbon Tracing Model Setup"
+  short_description: "Prepare COBRApy models and inputs for carbon tracing"
+  default_prompt: "Use $carbon-tracing-model-setup-skill to prepare and validate metabolic models for carbon tracing."
