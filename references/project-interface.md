@@ -27,7 +27,7 @@ stay inside the project. Paths inside plans are project-root-relative, not
 relative to the plan folder or terminal working directory.
 
 The asset discovers its project through an ancestor containing the shared
-exporter. Place it at `analyses/<analysis-name>/step1_prepare_inputs.py` before
+exporter. Place it at `results/results_by_AI/<analysis-name>/step1_prepare_inputs.py` before
 running it. Use the existing `.envs/preparation/bin/python`; do not create an
 environment per analysis. If the user installed environments elsewhere, adapt
 that path to their actual project. Leave shared scripts untouched.
@@ -59,7 +59,7 @@ status rather than rounding coefficients to manufacture support.
 The tested plan has exactly three top-level fields:
 
 ```json
-{"version": 3, "models": {}, "output_dir": "analyses/my_analysis/results"}
+{"version": 3, "models": {}, "output_dir": "results/results_by_AI/my_analysis"}
 ```
 
 Let `save_plan` populate it. Each model records input_file, input_sha256 and
@@ -88,17 +88,17 @@ limitation rather than editing the shared checks or pretending it is solved.
 ## Deliverable and next stage
 
 ```text
-analyses/my_analysis/
+results/results_by_AI/my_analysis/
     step1_prepare_inputs.py
     analysis_plan.json
     report.md
-    results/<model>_1_pFBA_nonzero_reactions.xlsx
+    <model>_1_pFBA_nonzero_reactions.xlsx
 ```
 
 From the project root, the next command is:
 
 ```bash
-python3 step2_atom_mapping.py --plan analyses/my_analysis/analysis_plan.json
+python3 step2_atom_mapping.py --plan results/results_by_AI/my_analysis/analysis_plan.json
 ```
 
 Step 2 and later stages are a separate task. No mapper, AI-review or propagation

@@ -48,9 +48,11 @@ project's `docs/interfaces.md`, exporter, example and step-2 input checks, then
 read [the handoff contract](references/project-interface.md).
 
 Keep the publication-reference step-1 script and existing results unchanged.
-Create a separate `analyses/<analysis-name>/` directory, sharing installed
+Create a separate `results/results_by_AI/<analysis-name>/` directory, sharing installed
 environments and raw model data. For a new request choose an unused directory;
-for an authorized rerun use the existing analysis directory.
+for an authorized rerun use the existing analysis directory. Put its script,
+plan, reports and input workbooks directly there; do not add a results
+subfolder. Shared models and caches remain under data/.
 
 Adapt [the readable example](assets/step1_prepare_inputs.py), or the installed
 project's compatible example. This asset is a runnable glucose/xylose example,
@@ -88,7 +90,7 @@ Verify the plan and input hashes with the installed project's loader, without
 calling mappers. Provide the exact next command from the project root, e.g.:
 
 ```bash
-python3 step2_atom_mapping.py --plan analyses/my_analysis/analysis_plan.json
+python3 step2_atom_mapping.py --plan results/results_by_AI/my_analysis/analysis_plan.json
 ```
 
 Stop after step 1 unless the user separately requests later stages. Atom mapping,

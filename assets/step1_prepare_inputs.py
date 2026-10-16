@@ -1,4 +1,4 @@
-"""Copy into analyses/<name>/ and adapt the explicit COBRApy model blocks."""
+"""Copy into results/results_by_AI/<name>/ and adapt the explicit COBRApy model blocks."""
 
 from pathlib import Path
 import hashlib
@@ -18,7 +18,7 @@ ROOT = next(
 )
 if ROOT is None:
     raise SystemExit(
-        "Place this script inside the carbon-tracing project, under analyses/<name>/."
+        "Place this script inside the carbon-tracing project, under results/results_by_AI/<name>/."
     )
 sys.path.insert(0, str(ROOT))
 
@@ -236,7 +236,7 @@ def main():
         report.unlink()
     models = prepare_models()
     entries = {}
-    output_dir = (CASE_DIR / "results").relative_to(ROOT).as_posix()
+    output_dir = CASE_DIR.relative_to(ROOT).as_posix()
     for name, (model, solution, sources) in models.items():
         entry = export_model(
             model, solution, name, sources, ROOT, output_dir, NONZERO_TOLERANCE
