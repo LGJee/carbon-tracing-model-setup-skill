@@ -15,6 +15,20 @@ Turn a biological question into a readable, reproducible step-1 analysis for
 Deliver actual input workbooks and a generated plan, not just proposed code.
 Use the user's language in conversation; write distributable files in English.
 
+## Project context and responsibility
+
+Atom-mapped-carbon-tracing connects a defined metabolic flux solution to reaction
+atom correspondences and downstream carbon-source analysis. This skill prepares
+the biological conditions and flux solution that determine which reactions and
+directions enter that analysis. Its deliverables are step-2 input workbooks and
+their analysis plan; preparing them does not establish carbon origins.
+
+The publication's non-IUPD/IUPD comparison is one reference application. New
+species, carbon mixtures, engineering strategies and objectives require their
+own stated assumptions. A model with missing molecular structures can still
+support flux calculation; downstream structure and mapping gaps must remain
+visible rather than being treated as biological impossibility.
+
 ## Resolve the analysis
 
 Inspect the supplied model and materials before asking questions. Establish the
