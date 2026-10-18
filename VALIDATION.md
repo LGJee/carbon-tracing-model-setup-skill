@@ -41,7 +41,7 @@ in mmol/gDW/h. These are illustrative growth conditions, not measured culture
 data or carbon-propagation results.
 
 The test suite requires the project's existing preparation environment and
-`data/ecoli/iML1515.json`; it downloads nothing. From this repository, run with
+`data/Escherichia_coli/iML1515.json`; it downloads nothing. From this repository, run with
 absolute paths and choose a new output folder inside the target project:
 
 ```bash

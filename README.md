@@ -27,5 +27,5 @@ Original models and third-party data are not bundled.
 
 This skill stops after input preparation. It does not run FVA, sampling, dynamic
 or community analysis, atom mapping, AI mapping review, or carbon propagation.
-The separate `carbon-tracing-ai-review-skill` and
+The separate `carbon-tracing-review-skill` and
 `enzymatic-atom-mapping-skill` handle reaction mapping review.

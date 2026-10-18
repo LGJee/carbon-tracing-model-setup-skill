@@ -24,7 +24,7 @@ class PreparationTests(unittest.TestCase):
         from carbon_flow_tools.cli import load_analysis_plan
 
         cls.load_plan = staticmethod(load_analysis_plan)
-        cls.model = cls.project / "data/ecoli/iML1515.json"
+        cls.model = cls.project / "data/Escherichia_coli/iML1515.json"
         if not cls.model.is_file():
             raise unittest.SkipTest("The real iML1515 JSON model is required.")
         files = [cls.project / "step1_prepare_carbon_tracing_inputs.py", cls.model]

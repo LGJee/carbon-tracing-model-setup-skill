@@ -41,7 +41,7 @@ def prepare_models():
     models = {}
 
     # 1. E. coli, glucose only. Capacities below are illustrative, not measured.
-    model_file = ROOT / "data/ecoli/iML1515.json"
+    model_file = ROOT / "data/Escherichia_coli/iML1515.json"
     model = read_model(model_file, SOLVER)
     labels = metabolite_labels(model)
     carbon_sources = [labels["glc__D_e"]]  # Extracellular D-glucose.
@@ -57,7 +57,7 @@ def prepare_models():
     models["Escherichia_coli_glucose"] = (model, solution, carbon_sources)
 
     # 2. E. coli, simultaneous supply. Reload so conditions remain independent.
-    model_file = ROOT / "data/ecoli/iML1515.json"
+    model_file = ROOT / "data/Escherichia_coli/iML1515.json"
     model = read_model(model_file, SOLVER)
     labels = metabolite_labels(model)
     carbon_sources = [labels["glc__D_e"], labels["xyl__D_e"]]
