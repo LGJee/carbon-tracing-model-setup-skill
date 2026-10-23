@@ -206,7 +206,7 @@ def write_report(entries, models, plan):
             "",
         ]
     )
-    report_dir = CASE_DIR / "reports"
+    report_dir = CASE_DIR / "Ai_reports"
     report_dir.mkdir(parents=True, exist_ok=True)
     (report_dir / "preparation_report.md").write_text("\n".join(lines), encoding="utf-8")
 
@@ -233,7 +233,7 @@ def main():
 
     target = invalidate_plan(ROOT, CASE_DIR / "analysis_plan.json")
     # An old report must not survive a failed rerun as an apparent new success.
-    report = CASE_DIR / "reports" / "preparation_report.md"
+    report = CASE_DIR / "Ai_reports" / "preparation_report.md"
     if report.exists():
         report.unlink()
     models = prepare_models()

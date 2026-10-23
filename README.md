@@ -34,7 +34,7 @@ The separate `carbon-tracing-review-skill` and
 
 Put disposable downloads, logs, proposals and validation work in the selected
 project's .cache/ai/setup/<run>/. Keep final workbooks, the reproducible script and
-analysis plan with the case, and its final report at reports/preparation_report.md.
+analysis plan with the case, and its final report at Ai_reports/preparation_report.md.
 Original model files, adopted structures/mappings and their scientific evidence
 remain in data/. Clearing .cache/ai/ after runs stop does not delete these final
 or reusable records; it only discards temporary work and progress.

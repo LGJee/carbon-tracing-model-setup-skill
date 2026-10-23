@@ -67,7 +67,7 @@ class PreparationTests(unittest.TestCase):
         data = json.loads(plan.read_text())
         _, jobs = self.load_plan(plan, "map", {})
         self.assertEqual(len(jobs), 2)
-        self.assertGreater((directory / "reports" / "preparation_report.md").stat().st_size, 0)
+        self.assertGreater((directory / "Ai_reports" / "preparation_report.md").stat().st_size, 0)
         for name, entry in data["models"].items():
             workbook = self.project / entry["input_file"]
             self.assertEqual(sha256(workbook), entry["input_sha256"])
@@ -159,7 +159,7 @@ class PreparationTests(unittest.TestCase):
         _, result = self.run_case("failed_rerun", "FBA", modify)
         self.assertNotEqual(result.returncode, 0)
         self.assertFalse((directory / "analysis_plan.json").exists())
-        self.assertFalse((directory / "reports" / "preparation_report.md").exists())
+        self.assertFalse((directory / "Ai_reports" / "preparation_report.md").exists())
         self.assertTrue(
             all(sha256(path) == digest for path, digest in originals.items())
         )
@@ -175,7 +175,7 @@ class PreparationTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("biological objective must have positive flux", result.stdout)
         self.assertFalse((directory / "analysis_plan.json").exists())
-        self.assertFalse((directory / "reports" / "preparation_report.md").exists())
+        self.assertFalse((directory / "Ai_reports" / "preparation_report.md").exists())
 
 
 if __name__ == "__main__":

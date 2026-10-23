@@ -1,6 +1,6 @@
 # Report outline
 
-Write one short English `reports/preparation_report.md` for the analysis. Use compact tables or
+Write one short English `Ai_reports/preparation_report.md` for the analysis. Use compact tables or
 paragraphs and observed values; omit irrelevant sections rather than leaving
 unfilled placeholders.
 

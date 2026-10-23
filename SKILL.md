@@ -62,7 +62,7 @@ review, structures or enzymatic-mapping. Reuse the orchestrator's supplied run
 folder when available. Do not put these process files in the results root.
 
 Keep final workbooks in the selected case output directory and readable final
-reports under its `reports/` subfolder. Preserve reproducible preparation scripts
+reports under its `Ai_reports/` subfolder. Preserve reproducible preparation scripts
 and analysis plans with the case. Downloaded models, adopted AI/manual chemistry
 CSVs and immutable evidence supporting adopted records remain in `data/`; they
 are not disposable cache. Do not move the only copy of a prior final delivery or
@@ -87,7 +87,7 @@ Keep the publication-reference step-1 script and existing results unchanged.
 Create a separate `results/results_by_AI/<analysis-name>/` directory, sharing installed
 environments and raw model data. For a new request choose an unused directory;
 for an authorized rerun use the existing analysis directory. Put its script,
-plan and input workbooks directly there, final reports under reports/, and
+plan and input workbooks directly there, final reports under Ai_reports/, and
 disposable process files under .cache/ai/setup/. Do not add a results subfolder.
 Shared original models and adopted scientific records remain under data/.
 
@@ -118,7 +118,7 @@ monkey-patching checks or claiming a new interface is available.
 ## Deliver
 
 Produce the analysis script, per-condition input workbooks, generated analysis
-plan and a short English `reports/preparation_report.md`. Follow
+plan and a short English `Ai_reports/preparation_report.md`. Follow
 [the report outline](references/report.md), replacing example descriptions with
 verified case-specific findings. Record the method explicitly: a legacy filename
 does not identify the method.
