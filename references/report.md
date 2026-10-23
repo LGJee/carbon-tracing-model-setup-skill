@@ -1,6 +1,6 @@
 # Report outline
 
-Write one short English `report.md` for the analysis. Use compact tables or
+Write one short English `reports/preparation_report.md` for the analysis. Use compact tables or
 paragraphs and observed values; omit irrelevant sections rather than leaving
 unfilled placeholders.
 
@@ -22,3 +22,8 @@ unfilled placeholders.
 For a failed run, state which condition failed and why, whether any files were
 written, and that no successful batch plan is available. Do not invent numerical
 results or silently relax culture conditions to produce a report.
+
+Keep solver logs, research downloads, draft scripts and validation JSON under the
+project's .cache/ai/setup/<run>/. Preserve the final runnable preparation script,
+analysis plan and original model provenance outside cache so clearing temporary
+work does not prevent reproduction.

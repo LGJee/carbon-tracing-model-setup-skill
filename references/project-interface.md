@@ -91,7 +91,8 @@ limitation rather than editing the shared checks or pretending it is solved.
 results/results_by_AI/my_analysis/
     step1_prepare_inputs.py
     analysis_plan.json
-    report.md
+    reports/
+        preparation_report.md
     <model>_1_pFBA_nonzero_reactions.xlsx
 ```
 

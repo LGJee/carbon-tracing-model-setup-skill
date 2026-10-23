@@ -48,7 +48,7 @@ absolute paths and choose a new output folder inside the target project:
 PROJECT=/path/to/atom-mapped-carbon-tracing
 "$PROJECT/.envs/preparation/bin/python" tests/test_preparation.py \
   --project "$PROJECT" \
-  --output "$PROJECT/data/validation/model_setup_skill_test"
+  --output "$PROJECT/.cache/ai/setup/model_setup_skill_test"
 ```
 
 ## Limits

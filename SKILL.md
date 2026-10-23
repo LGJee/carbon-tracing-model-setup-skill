@@ -53,6 +53,28 @@ representative is appropriate; explain the choice. Do not run FVA, sampling,
 dynamic cultivation or community analyses in this version. For other requests,
 describe the required extension without claiming it is implemented.
 
+## Disposable AI work and final files
+
+Use `<project>/.cache/ai/<stage>/<run>/` for disposable AI process files:
+research downloads, extracted inputs, proposals, staging workbooks, retry reports,
+logs, validation output and continuation JSON. Stages may be workflow, setup,
+review, structures or enzymatic-mapping. Reuse the orchestrator's supplied run
+folder when available. Do not put these process files in the results root.
+
+Keep final workbooks in the selected case output directory and readable final
+reports under its `reports/` subfolder. Preserve reproducible preparation scripts
+and analysis plans with the case. Downloaded models, adopted AI/manual chemistry
+CSVs and immutable evidence supporting adopted records remain in `data/`; they
+are not disposable cache. Do not move the only copy of a prior final delivery or
+its scientific evidence into cache. A brief same-filesystem temporary file for
+atomic final publication is allowed and must be cleaned up.
+
+Users can remove `.cache/ai/` after its runs have stopped. This loses temporary
+progress and downloaded research pages, not formal results or adopted evidence.
+Do not automatically delete active runs, clear shared scientific tables, relocate
+old case files or change the computation project's own caches as a side effect.
+For standalone use without a project, use `.cache/ai/` under the chosen work folder.
+
 ## Prepare and execute
 
 Locate the user's actual project and inspect its interface before generating
@@ -65,8 +87,9 @@ Keep the publication-reference step-1 script and existing results unchanged.
 Create a separate `results/results_by_AI/<analysis-name>/` directory, sharing installed
 environments and raw model data. For a new request choose an unused directory;
 for an authorized rerun use the existing analysis directory. Put its script,
-plan, reports and input workbooks directly there; do not add a results
-subfolder. Shared models and caches remain under data/.
+plan and input workbooks directly there, final reports under reports/, and
+disposable process files under .cache/ai/setup/. Do not add a results subfolder.
+Shared original models and adopted scientific records remain under data/.
 
 Adapt [the readable example](assets/step1_prepare_inputs.py), or the installed
 project's compatible example. This asset is a runnable glucose/xylose example,
@@ -95,7 +118,7 @@ monkey-patching checks or claiming a new interface is available.
 ## Deliver
 
 Produce the analysis script, per-condition input workbooks, generated analysis
-plan and a short English `report.md`. Follow
+plan and a short English `reports/preparation_report.md`. Follow
 [the report outline](references/report.md), replacing example descriptions with
 verified case-specific findings. Record the method explicitly: a legacy filename
 does not identify the method.
