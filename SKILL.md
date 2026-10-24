@@ -131,9 +131,14 @@ python3 step2_atom_mapping.py --plan results/results_by_AI/my_analysis/analysis_
 ```
 
 Stop after step 1 unless the user separately requests later stages. Atom mapping,
-AI review and carbon propagation belong to the separate project orchestrator;
+AI review and EMU carbon-source analysis belong to the separate project orchestrator;
 this skill does not call the existing mapping-review skills by default.
 
 On failure, report the actual blocker and which artifacts, if any, are valid.
 Do not present stale outputs as new successes. A calculated representative is
 not all feasible pathways, an isotope measurement or a carbon-propagation result.
+
+The current downstream step3 is EMU-only. Preparation does not configure rounds
+or enumeration and does not claim source fractions have been calculated. Keep
+this skill's standard step-2 inputs unchanged; inspect the selected project's
+interface when another checkout exposes a different analysis version.

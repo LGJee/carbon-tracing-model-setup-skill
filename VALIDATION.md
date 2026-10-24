@@ -1,3 +1,11 @@
+## EMU-only compatibility check (2026-10-24)
+
+All five existing real-model preparation/handoff tests passed against the current
+local EMU-only development project. The step-1 export schema and asset remain
+unchanged. Official skill metadata validation passed. The following earlier
+validation record describes its original checks, not new independent agent tests.
+No full-network source analysis or fresh environment installation was performed.
+
 # Validation
 
 Validated on 2026-10-15 against the local Python development implementation of

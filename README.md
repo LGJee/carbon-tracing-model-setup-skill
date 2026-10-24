@@ -38,3 +38,17 @@ analysis plan with the case, and its final report at Ai_reports/preparation_repo
 Original model files, adopted structures/mappings and their scientific evidence
 remain in data/. Clearing .cache/ai/ after runs stop does not delete these final
 or reusable records; it only discards temporary work and progress.
+
+## EMU-only downstream compatibility
+
+The step-1/step-2 export contract is unchanged. The current project's step3 runs
+size-1 EMU-inspired source balances only; this setup skill does not calculate
+those fractions, introduce rounds or modify the publication reference script.
+See references/project-interface.md for the current downstream boundary.
+
+Validation on 2026-10-24 used the current local EMU-only development interface.
+Official skill metadata checks passed. Tests were isolated and did not modify
+reference plans, model files or existing formal results. This does not certify
+biochemical accuracy, a fresh deployment, older public project versions or
+cross-platform execution. The computation project is not published by this skill
+maintenance task.

@@ -105,3 +105,13 @@ python3 step2_atom_mapping.py --plan results/results_by_AI/my_analysis/analysis_
 Step 2 and later stages are a separate task. No mapper, AI-review or propagation
 call is required to validate this handoff. See the project's own interfaces for
 optional reviewed copies and later stage behavior.
+
+## Downstream compatibility
+
+The current project retains this step-1/step-2 contract unchanged while step3 now
+runs only size-1 EMU-inspired carbon-source balances. Do not add rounds or method
+selection to a plan or preparation script. Later ordinary/AI outputs each have
+EMU_Metabolites and EMU_BoundaryInputs, not Summary or enumeration rows. This
+skill still stops after validated step-2 inputs; missing structures remain a
+step-2/review responsibility. Refer downstream users to the actual project
+docs/interfaces.md rather than copying a historical analysis command.
